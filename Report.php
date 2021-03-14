@@ -19,6 +19,7 @@ class Report {
             $year = $isi['year'];
             // validation
             if($age >= $year) return false;
+            if($age <= 0 || $year <= 0) return false;
 
             $born = $year - $age;
             $total_born += Saga::dieByYear($born);
